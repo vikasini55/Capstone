@@ -1,0 +1,68 @@
+{
+  "user": [
+    {
+      "name": "suresh Rahul",
+      "email": "sureshrahul@gmail.com",
+      "phone": "9492339868",
+      "address": "absbdjnasnd",
+      "experience": "kasdojaopjip",
+      "id": 1
+    },
+    {
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "phone": "7845301592",
+      "address": "absbdjnasnd",
+      "experience": "kasdojaopjip",
+      "id": 2
+    },
+    {
+      "name": "David",
+      "email": "david1@gmail.com",
+      "phone": "7894216545",
+      "address": "oajspdnapinpi",
+      "experience": "pojpiadjanoj",
+      "id": 3
+    },
+    {
+      "name": "asdank",
+      "email": "knkasndjnjan",
+      "phone": "945557854664",
+      "address": "sadnjanlsjdn",
+      "experience": "nsajndjlnlj",
+      "id": 4
+    },
+    {
+      "name": "sas",
+      "email": "saadas",
+      "phone": "48496155546",
+      "address": "asad",
+      "experience": "sad",
+      "id": 5
+    },
+    {
+      "name": "sandy",
+      "email": "nsjlan@gmail.com",
+      "phone": "9492339868",
+      "address": "asjdlnlsa",
+      "experience": "nsadlandi",
+      "id": 6
+    }
+  ],
+  "GetInTouch": [
+    {
+      "name": "Suresh Rahul",
+      "email": "sureshrahulkkr@gmail.com",
+      "phone": "9493265791",
+      "message": "jasbdojandpksnapk",
+      "id": 1
+    },
+    {
+      "name": "jansdalk",
+      "email": "ajnsdln@gmail.com",
+      "phone": "9784567845",
+      "message": "sadkma;md",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+.carousel-item {
+    height: 25rem;
+    background: black;
+    color:white;
+    position:relative; 
+
+}
+
+
+img{
+    position:relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+}
+
+.slide-text {
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.container {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+}
+
+
+.link-skew {
+    background-color:rgb(206, 2, 2) !important;
+    transform: skew(-25deg);
+    text-align: center;
+    margin-top: 90px;
+    width: 250px;
+    height: 100px;
+    padding: 30px;
+    margin-right: 70px;
+    margin-left: 0px;
+    font-size: 35px;
+    font-family:"Gill Sans", sans-serif;
+    
+}
+
+.Nav-items {
+    margin-left: 23%;
+    
+}
+
+
+.btm-links {
+    height: 15rem;
+    background-color: rgb(20, 8, 31);
+}
