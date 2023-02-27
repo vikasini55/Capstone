@@ -72,7 +72,7 @@ const ApplyJob = () => {
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>Name <span className="errmsg">*</span></label>
-                                        <input value={name} onChange={e => namechange(e.target.value.replace(/[^a-z]/gi, ''))} className="form-control" title="No special characters and numbers." required></input>
+                                        <input value={name} onChange={e => namechange(e.target.value.replace(/[^a-z]/gi, ''))} className="form-control" required></input>
                                     </div>
                                 </div>
 

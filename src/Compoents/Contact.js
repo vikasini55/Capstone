@@ -60,7 +60,7 @@ const Contact = () => {
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label>Phone <span className="errmsg">*</span></label>
-                                        <input value={phone} onChange={e => phonechange(e.target.value)} className="form-control" required></input>
+                                        <input value={phone} onChange={e => phonechange(e.target.value.replace(/^d{0-9}$/))} className="form-control" maxLength={10} required></input>
                                     </div>
                                 </div>
 
@@ -81,12 +81,12 @@ const Contact = () => {
             </div>
             <ToastContainer/>
             <div className="contact-details">
-                <h2>Contact US</h2>
-                <div>Address :123 Park Avenue C, AK Marg, Delhi, India </div>
-                <div>Phone: 987 654 3210, 
-                            987 654 3211                    
+                <h2><b><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>CONTACT US</u></i></b></h2>
+                <div><i class="bi bi-geo-alt-fill"> : 123 Park Avenue C, AK Marg,<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delhi, India </i></div>
+                <div><i class="bi bi-telephone"> : 987 654 3210,<br/> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;987 654 3211</i>        
                 </div>
-                <div>email: contact@topjobs.com </div>
+                <div><i class="bi bi-envelope-at-fill"> : contact@topjobs.com </i></div>
             </div>
         </div>
         </div>
