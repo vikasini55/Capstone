@@ -7,25 +7,26 @@ const UserCard = (props) => {
     return(
     <>
     {props.details.map((value,index) => (
-    <Nav.Link as ={Link} to ={`/applyjob/${value.id}`}>
+   // <Nav.Link href={`/applyjob/${value.id}`}>
         <div className="cards">
             <div class="card flex-row flex-wrap" key={index}>
-                <div class="card-header border-0">
-                    <img src={value.img} className="card-image" alt="Image1" />
-                </div>
                 <div class="card-block px-2">
-                    <h4 class="card-title">ID:{value.id}</h4>
-                    <h4 class="card-title">Role:{value.role}</h4>
-                    <p class="card-text">
-                        <i className="bi bi-buildings"/>{value.company}
+                <Nav.Link alt="link1" href={`/applyjob/${value.id}`}>
+               <h4 data-testid="link2" class="card-title">ID:{value.id}</h4></Nav.Link>
+                    <h3 class="card-title1">{value.role}</h3>  
+                    
+                   
+                 <h5 className="bi bi-buildings"> {value.company}</h5>
+                    <div class="card-text">
+                      
                         <i className="bi bi-briefcase"/> {value.experience}
                         <i className="bi bi-currency-rupee"/>{value.salary}
                         <i className="bi bi-geo-alt-fill"/>{value.location}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </Nav.Link>
+ //   </Nav.Link>
     ))}
     </>
     )

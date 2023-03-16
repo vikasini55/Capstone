@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom"; 
 import './Styles/ApplyJobs.css'
 
 const ApplyJob = () => {
@@ -9,6 +10,9 @@ const ApplyJob = () => {
     const [phone, phonechange] = useState("");
     const [address, addresschange] = useState("");
     const [experience, experiencechange] = useState("");
+    
+
+    const navigate = useNavigate();
 
     const IsValidate = () => {
         let isproceed = true;
@@ -18,9 +22,21 @@ const ApplyJob = () => {
             isproceed = false;
             errormessage += ' Name';
         }
+        
+        if (phone === null || phone === '') {
+            isproceed = false;
+            errormessage += ' Phonenumber';
+        }
+       if (address === null || address === '') {
+            isproceed = false;
+            errormessage += ' Address';
+        }
+       if (experience === null || experience === '') {
+            isproceed = false;
+            errormessage += ' Experience';
+        }
 
-
-        if (email === null || email === '') {
+         if (email === null || email === '') {
             isproceed = false;
             errormessage += ' Email';
         }
@@ -34,9 +50,28 @@ const ApplyJob = () => {
                 isproceed = false;
                 toast.warning('Please enter the valid email')
             }
+        //     if(/^[0-9]/.test(phone)){
+
+        //     }else{
+        //         isproceed = false;
+        //         toast.warning('Please enter the valid phone nmuber')
+        //     }
+        //     if(/^[a-zA-Z]/.test(name)){
+
+        //     }else{
+        //         isproceed = false;
+        //         toast.warning('Please enter the valid Name')
+        //     }
+        //     if(experience.length<"10".test(experience)){
+
+        //     }else{
+        //         isproceed = false;
+        //         toast.warning('Please enter the valid experience')
+        //     }
         }
         return isproceed;
     }
+    
 
 
     const handlesubmit=(e)=> {
@@ -45,15 +80,18 @@ const ApplyJob = () => {
         if(IsValidate()) {
             console.log(applyobj);
 
-            fetch(" http://localhost:8000/user",{
+            fetch(" http://localhost:8000/user" ,{
                 method:"POST",
                 headers:{'content-type':'application/json'},
                 body:JSON.stringify(applyobj)
             }).then((res)=>{
                 toast.success('Registered Successfully.')
+                setTimeout(() => {
+                    navigate("/jobs")
+               }, 4000);
             }).catch((err)=>{
-                toast.error('Failed');
-            });
+                toast.error('Failed :'+err.message);
+            }); 
         }
 
     }
@@ -71,35 +109,36 @@ const ApplyJob = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Name <span className="errmsg">*</span></label>
-                                        <input value={name} onChange={e => namechange(e.target.value.replace(/[^a-z]/gi, ''))} className="form-control" required></input>
+                                        <label className="one">Name <span className="errmsg">*</span></label>
+                                        <input value={name} onChange={e => namechange(e.target.value)} className="form-control" required></input>
+                                        
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Email <span className="errmsg">*</span></label>
+                                        <label className="one">Email <span className="errmsg">*</span></label>
                                         <input value={email} onChange={e => emailchange(e.target.value)} className="form-control" required></input>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Phone <span className="errmsg">*</span></label>
+                                        <label className="one">Phone <span className="errmsg">*</span></label>
                                         <input value={phone} onChange={e => phonechange(e.target.value.replace(/^d{0-9}$/))} className="form-control" maxLength={10} required></input>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Address <span className="errmsg">*</span></label>
+                                        <label className="one">Address <span className="errmsg">*</span></label>
                                         <textarea value={address} onChange={e => addresschange(e.target.value)} className="form-control" required></textarea>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Experience <span className="errmsg">*</span></label>
+                                        <label className="one">Experience <span className="errmsg">*</span></label>
                                         <textarea value={experience} onChange={e => experiencechange(e.target.value)} className="form-control" required></textarea>
                                     </div>
                                 </div>
@@ -107,12 +146,12 @@ const ApplyJob = () => {
 
                         </div>
                         <div className="card-footer">
-                            <button type="submit" className="btn btn-primary" id="apply-btn">Apply Job</button>
+                            <button type="submit" className="btn btn-success" id="apply-btn">Apply Job</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <ToastContainer/>
+            <ToastContainer  position="top-center"/>   
         </div>
         </div>
 

@@ -41,12 +41,3 @@ describe("Home Component", () => {
 
 
 
-/*    const ImgElement = screen.getByRole("img", { name: /first slide/i });
-    expect(ImgElement).toBeInTheDocument;
-    const ButtonElement = screen.getByRole("button", { name: /jobs/i });
-    expect(ButtonElement).toBeInTheDocument;
-  });
-  it("checks whether logo is Loaded", () => {
-    const logo = screen.queryByRole("img", { name: /logo/i });
-    expect(logo).toBeInTheDocument;
-  });*/

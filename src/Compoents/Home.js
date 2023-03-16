@@ -3,9 +3,9 @@ import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { Carousel } from "react-bootstrap";
 import './Styles/Home.css'
-import img1 from "./Images/c_img1.png"
-import img2 from "./Images/c_img4.jpg"
-import img3 from "./Images/c_img5.jpg"
+import img1 from "./Images/car2.jpg"
+import img2 from "./Images/car6.webp"
+import img3 from "./Images/car4.jpg"
 const Home = () => {
     return (
         <div className="App">
@@ -21,26 +21,26 @@ const Home = () => {
                 </Carousel.Item>
                 <Carousel.Item><img src= {img2} alt="Second slide"/>
                     <Carousel.Caption className="slide-text">
-                    <h1>REGISTER WITH US</h1>
-                        <p>Lots of openings are coming soon.
+                    <h1>CREATE YOUR JOB</h1>
+                        <p>Your dream job doesn't exists you must have to create it.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item><img src= {img3} alt="Thrid slide"/>
                     <Carousel.Caption className="slide-text">
-                    <h1>MOVE AHEAD IN CARRER</h1>
-                        <p>Apply from us and boost your job search.
+                    <h1>ABOUT DREAM JOB</h1>
+                        <p>It won't be easy but worth it.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             </div>
 
-            <div className="btm-links">
+            <div className="bottom-links">
                 <Navbar className="Nav-items">
-                    <Nav.Link as ={Link} to ="/jobs" className="link-skew">Jobs</Nav.Link>
-                    <Nav.Link as ={Link} to ="/contact" className="link-skew">Contact us</Nav.Link>
-                    <Nav.Link as ={Link} to ="#" className="link-skew">Coming Soon</Nav.Link>
+                    <Nav.Link href="jobs" className="bottomlink">Jobs</Nav.Link>
+                    <Nav.Link href="contact" className="bottomlink">Contact us</Nav.Link>
+                    <Nav.Link href="#" className="bottomlink">Coming Soon</Nav.Link>
                 </Navbar> 
             </div>
         </div>          

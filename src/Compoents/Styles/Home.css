@@ -1,11 +1,13 @@
 .carousel-item {
-    height: 25rem;
+    height: 35rem;
     background: black;
-    color:white;
+    color:rgb(243, 243, 245);
     position:relative; 
 
 }
-
+h1{
+    color: white;
+}
 
 img{
     position:relative;
@@ -35,28 +37,30 @@ p {
 }
 
 
-.link-skew {
-    background-color:rgb(206, 2, 2) !important;
-    transform: skew(-25deg);
+.bottomlink {
+    background-color:rgb(122, 137, 168);
+    transform: skew(-15deg);
     text-align: center;
-    margin-top: 90px;
-    width: 250px;
-    height: 100px;
-    padding: 30px;
-    margin-right: 70px;
+    margin-top: 50px;
+    width: 280px;
+    height: 70px;
+    padding: 20px;
+    margin-right: 60px;
     margin-left: 0px;
-    font-size: 35px;
-    font-family:"Gill Sans", sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
 .Nav-items {
-    margin-left: 23%;
+    margin-left: 12%;
     
 }
 
 
-.btm-links {
-    height: 15rem;
-    background-color: rgb(20, 8, 31);
+.bottom-links {
+    height: 12rem;
+    background-color: rgb(7, 36, 99);
+    align-items: center;
 }

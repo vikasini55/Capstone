@@ -3,6 +3,7 @@
     left: 15px;
     font-weight: bold;
     font-size: 55px;
+    font-family: cursive;
     
 }
 
@@ -20,7 +21,7 @@
 
 }
 .navbar-brand {
-    color: rgb(206, 2, 2) !important;
+    color: rgb(245, 237, 237) !important;
     font-size: 35px !important; 
     margin-top: 20px;
     
@@ -28,6 +29,6 @@
 
 .Nav-toggler {
     height: 70px;
-    background-color: rgb(20, 8, 31);
+    background-color: rgb(7, 36, 99);
     color: white;
 }
